@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
-import { MovieService } from './moviebrowser/movie.service';
+import { MovieService } from './services/movie.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +8,5 @@ import { MovieService } from './moviebrowser/movie.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'movie-world';
+  title = 'Film világ';
 }

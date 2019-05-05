@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviebrowserComponent } from './moviebrowser/moviebrowser.component';
-import { MovieService } from './moviebrowser/movie.service';
+import { MovieService } from './services/movie.service';
 
 @NgModule({
   declarations: [
