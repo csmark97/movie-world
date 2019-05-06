@@ -12,6 +12,7 @@ import { FormsModule} from '@angular/forms';
 export class MoviebrowserComponent implements OnInit {
 
   query = "";
+  results: any[];
 
   ngOnInit() {
   }
@@ -20,7 +21,12 @@ export class MoviebrowserComponent implements OnInit {
 
   onGet(query: string) {
     this.movieService.getMovies(query).subscribe(
-      (response) => console.log(response),
+      (response) => {
+        this.results = response.json().results;
+        console.log(response);
+        console.log(this.results);
+        console.log("A " + this.results[0].title + " c. film felnőtt tartalom: " + (this.results[0].adult ? "igen" : "nem"));
+      },
       (error) => console.log(error)
     );
   }
