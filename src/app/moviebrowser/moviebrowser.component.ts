@@ -17,15 +17,16 @@ export class MoviebrowserComponent implements OnInit {
   ngOnInit() {
   }
 
-  constructor(private movieService: MovieService) {  }
+  constructor(private movieService: MovieService) { 
+    this.onGet("");
+   }
+
 
   onGet(query: string) {
     this.movieService.getMovies(query).subscribe(
       (response) => {
-        this.results = response.json().results;
-        console.log(response);
+        this.results = response.results;
         console.log(this.results);
-        console.log("A " + this.results[0].title + " c. film felnőtt tartalom: " + (this.results[0].adult ? "igen" : "nem"));
       },
       (error) => console.log(error)
     );

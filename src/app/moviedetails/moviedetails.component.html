@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card mb-3">
+    <img class="card-img-top" [src]='"https://image.tmdb.org/t/p/w500" + movie.backdrop_path' alt="A film képe">
+    <div class="card-body">
+      <h5 class="card-title">{{movie.title}}</h5>
+      <span class="label label-info" *ngFor="let genre of movie.genres">{{genre.name}}</span>
+      <p class="card-text">{{ movie.release_date.substring(0,4) }}</p>
+      <p class="card-text">{{ movie.overview }}</p>
+      <hr>
+      <h6>Szereplők</h6>
+      <p class="card-text" *ngFor="let credit of credits.cast">
+        <a routerLink="/actor/{{credit.id}}">
+          {{ credit.name }}
+        </a>
+        - {{ credit.character }}</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 <hr>
 <div class="container">
-    <h3>Keressen kedvére filmeink között!</h3>
+    <h3><a>Keressen kedvére filmeink között!</a></h3>
     <div class="row">
         <div class="col-sm-7">
             <input class="form-control" type="text" placeholder="Search" aria-label="Search"
@@ -21,7 +21,7 @@
                 </a>
                 <div class="card-body">
                     <h4 class="card-title" title="További adatok">
-                        <a>
+                        <a routerLink="/{{movie.id}}">
                             {{ movie.title }}
                         </a>
                     </h4>
