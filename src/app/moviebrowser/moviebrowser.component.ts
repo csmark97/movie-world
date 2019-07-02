@@ -25,7 +25,7 @@ export class MoviebrowserComponent implements OnInit {
   onGet(query: string) {
     this.movieService.getMovies(query).subscribe(
       (response) => {
-        this.results = response.results;
+        this.results = response.results; //TODO
         console.log(this.results);
       },
       (error) => console.log(error)
